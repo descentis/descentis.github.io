@@ -1,13 +1,10 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: कष्ट में किये गए कर्मों से भाग्य का निर्माण होता है| -- गीता 
 ---
 
-My name is Inigo Montoya. I have the following qualities:
-
-- I rock a great mustache
-- I'm extremely loyal to my family
+Hi, I am Amit Kumar Verma, Research Scholar at Indian Institute of Technology Ropar, India. My research interests lies in the area of Collective Intelligence, Collaborative Knowledge building, and Open Source Software development. I am working under the supervision of Dr. Sudarshan Iyengar
 
 What else do you need?
 
