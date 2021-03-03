@@ -10,9 +10,11 @@ comments: true
 
 We investigate the impact of gradual edits on the re-positioning and organization of the factual information in Wikipedia articles. Literature shows that in a collaborative system, a set of contributors are responsible for seeking, perceiving, and organizing the information. Based on our analysis, we show that in a Wikipedia article, the crowd is capable of placing the factual information to its correct position, eventually reducing the knowledge gaps. We also show that the majority of information rearrangement occurs in the initial stages of the article development and gradually decreases in the later stages.
 
-**Here is some bold text**
 
-## Here is a secondary heading
+
+## Methodology
+For a Wikipedia article, we created the list of factoids for each of its revisions. Let’s say there are $n_i$ revisions
+# Dataset
 
 Here's a useless table:
 
