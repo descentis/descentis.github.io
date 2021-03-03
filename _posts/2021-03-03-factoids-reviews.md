@@ -10,7 +10,9 @@ comments: true
 
 # Prohect Details
 Name: Tracing the Factoids: the Anatomy of Information Re-organization in Wikipedia Articles
+
 Authors: Amit Arjun Verma, Neeru Dubey, S. R. S. Iyengar, Simran Setia
+
 Portal(s) where submitted: CHIIR-21 and WWW-21
 
 
@@ -20,6 +22,7 @@ Portal(s) where submitted: CHIIR-21 and WWW-21
 ## CHIIR - 21
 
 -------------------------  METAREVIEW  ------------------------
+
 This is the meta-review by the Senior PC member responsible for the paper.
 
 Synthesis:
@@ -99,27 +102,47 @@ welcome future submissions from you on this topic to CHIIR.
 
 
 ----------------------- REVIEW 1 ---------------------
+
 SUBMISSION: 82
+
 TITLE: Tracing the Facts Sequencing: the Anatomy of Information Re-organization in Wikipedia Articles
+
 AUTHORS: Amit Arjun Verma, Neeru Dubey, S. R. S Iyengar and Simran Setia
 
 ----------- Relevance -----------
+
 SCORE: 0 (fair)
+
 ----------- Originality -----------
+
 SCORE: 2 (excellent)
+
 ----------- Technical/methodological soundness -----------
+
 SCORE: 1 (good)
+
 ----------- Quality of presentation -----------
+
 SCORE: 2 (excellent)
+
 ----------- Impact of contributions -----------
+
 SCORE: 1 (good)
+
 ----------- Adequacy of citations -----------
+
 SCORE: 1 (good)
+
 ----------- Reproducibility -----------
+
 SCORE: 1 (good)
+
 ----------- Overall evaluation -----------
+
 SCORE: 2 (accept)
+
 ----- TEXT:
+
 The submission shows an elaborate analysis of Wikipedia articles and their structure. The structure is analyzed by measuring the similarity of subsequent sentences and taking the average.
 The work represents an interesting application of deep learning technology, in this case sentence embeddings.
 
@@ -147,27 +170,48 @@ that majority -> that the majority
 
 
 ----------------------- REVIEW 2 ---------------------
+
 SUBMISSION: 82
+
 TITLE: Tracing the Facts Sequencing: the Anatomy of Information Re-organization in Wikipedia Articles
+
 AUTHORS: Amit Arjun Verma, Neeru Dubey, S. R. S Iyengar and Simran Setia
 
+
 ----------- Relevance -----------
+
 SCORE: -1 (poor)
+
 ----------- Originality -----------
+
 SCORE: 0 (fair)
+
 ----------- Technical/methodological soundness -----------
+
 SCORE: 1 (good)
+
 ----------- Quality of presentation -----------
+
 SCORE: 1 (good)
+
 ----------- Impact of contributions -----------
+
 SCORE: -1 (poor)
+
 ----------- Adequacy of citations -----------
+
 SCORE: -2 (very poor)
+
 ----------- Reproducibility -----------
+
 SCORE: 1 (good)
+
 ----------- Overall evaluation -----------
+
 SCORE: -1 (weak reject)
+
 ----- TEXT:
+
 In this article, the authors study the reorganization of information in Wikipedia articles through following the edit history of articles. They operationalize their idea by using a sentence-level analysis. Each sentence is considered a factoid.
 They calculate the cosine similarity between two consecutive factoids (sentences) in each revision to assess how well information is organized in a Wikipedia article.
 
@@ -197,27 +241,48 @@ Table 1 is, for my liking, a bit meaningless. I think it would be much better if
 
 
 ----------------------- REVIEW 3 ---------------------
+
 SUBMISSION: 82
+
 TITLE: Tracing the Facts Sequencing: the Anatomy of Information Re-organization in Wikipedia Articles
+
 AUTHORS: Amit Arjun Verma, Neeru Dubey, S. R. S Iyengar and Simran Setia
 
+
 ----------- Relevance -----------
+
 SCORE: 1 (good)
+
 ----------- Originality -----------
+
 SCORE: 1 (good)
+
 ----------- Technical/methodological soundness -----------
+
 SCORE: 0 (fair)
+
 ----------- Quality of presentation -----------
+
 SCORE: 1 (good)
+
 ----------- Impact of contributions -----------
+
 SCORE: 0 (fair)
+
 ----------- Adequacy of citations -----------
+
 SCORE: 1 (good)
+
 ----------- Reproducibility -----------
+
 SCORE: 1 (good)
+
 ----------- Overall evaluation -----------
+
 SCORE: 0 (borderline paper)
+
 ----- TEXT:
+
 This paper presents an empirical analysis of the impact of edits on the re-organization of factual information in Wikipedia articles. The authors measure the relevance of factoid (sentence) positions in the article by calculating the similarity between consecutive sentences using represented by pre-trained embeddings. They also measure the correlation of sentence similarity with revisions to analyze the stability of factoid evolution over time. Besides, a correlational analysis is also conducted between the average semantic similarity of sentences in an article and the article quality.
 
 The paper targets a relevant problem in crowd knowledge creation. Dataset and analysis are interesting. The paper is well structured and overall easy to follow (with some minor writing issues, see below).
@@ -238,17 +303,24 @@ Writing can be improved. There are places where the messages are vague, e.g.,
 ## The Web Conference - 21 Reviews (Wiki Workshop)
 
 -------------------------  METAREVIEW  ------------------------
+
 There is no metareview for this paper
 
 
 ----------------------- REVIEW 1 ---------------------
+
 SUBMISSION: 8
+
 TITLE: Tracing the Factoids: the Anatomy of Information Re-organization in Wikipedia Articles
+
 AUTHORS: Amit Arjun Verma, Neeru Dubey, S. R. S Iyengar and Simran Setia
 
 ----------- Overall evaluation -----------
+
 SCORE: 2 (accept)
+
 ----- TEXT:
+
 This paper investigates the rearrangement of information in Wikipedia articles due to gradual edits. The authors quantify how information organization, especially the positioning of factoids i.e. sentences taken as factual information tokens,  impacts the quality of such articles. The authors find higher rearrangement in the early stages of the article revision and convergence towards a stable version.  Moreover, they find a positive correlation between average sentence similarity and the articles’ quality class.
 
 Overall, the article is well written and well-grounded in the literature, although the task at study was not particularly explored previously. The methodology implied is appropriate for the task. I believe that even if the measure of similarity between consecutive factoids (averaged on the article!) is not immediately or solely related to the order of the factoids (but rather to the order and the content jointly or the style), the correlation analyses performed are thorough, the results find interesting patterns and they are well discussed.
@@ -263,13 +335,19 @@ Minor comments:
 
 
 ----------------------- REVIEW 2 ---------------------
+
 SUBMISSION: 8
+
 TITLE: Tracing the Factoids: the Anatomy of Information Re-organization in Wikipedia Articles
+
 AUTHORS: Amit Arjun Verma, Neeru Dubey, S. R. S Iyengar and Simran Setia
 
 ----------- Overall evaluation -----------
+
 SCORE: 1 (weak accept)
+
 ----- TEXT:
+
 This paper describes an analysis of information reorganisation in 500 Wikipedia articles. The authors measure the semantic similarity of consecutive sentences (as calculated through cosine similarity of sentence embeddings) and investigate how this changes through the article's life cycle. Their findings indicate that this similarity metric increases and converges as articles mature. The results are interesting and convincing, with some limitations.
 
 The central premise here is that information is being inserted and then, in later revisions, displaced to different locations in the article, causing an increase in the semantic similarity of consecutive sentences. However, no evidence is presented that the same factoids are indeed present and are being reorganised in consecutive edits; consecutive sentence similarity may be increasing because of the addition of new information. Some qualitative analysis might make your argument stronger.
