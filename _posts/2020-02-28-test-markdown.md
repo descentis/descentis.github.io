@@ -12,25 +12,18 @@ We investigate the impact of gradual edits on the re-positioning and organizatio
 
 
 
-## Methodology
-For a Wikipedia article, we created the list of factoids for each of its revisions. Let’s say there are $n_i$ revisions in article $a_i$, then for each revision $R_j$, where $j ∈ {1, 2, 3, 4, ...,n_i }$, we create a list of factoids ordered in the way they were present in the revision $R_j$. We call this list as $F_j$.
-# Dataset
+# Methodology
+For a Wikipedia article, we created the list of factoids for each of its revisions. Let’s say there are $n_i$ revisions in article $a_i$, then for each revision $R_j$, where $j ∈ {1, 2, 3, 4, ...,n_i }$, we create a list of factoids ordered in the way they were present in the revision $R_j$. We call this list as $F_j$. We
+focus our analysis on the placement of the factoids in the Wikipedia articles.
 
-Here's a useless table:
+We first obtain the vector embeddings of each factoid using Universal Sentence Encoder then we find the similarity between the embedding of two factoids using the Cosine Similarity, which is defined as a metric used to measure how similar two records are irrespective of their size. It gauges the cosine of the point between two vectors anticipated in a multi-dimensional space.
 
-| Number | Next number | Previous number |
-| :------ |:--- | :--- |
-| Five | Six | Four |
-| Ten | Eleven | Nine |
-| Seven | Eight | Six |
-| Two | Three | One |
+## Dataset
+we have taken a random sample of 500 articles out of 5000 most frequently edited English Wikipedia articles collected in April 2020.
 
+## Results
 
-How about a yummy crepe?
-
-![Crepe](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg)
-
-It can also be centered!
+In 458 articles out of 500 (91.6%), we observe average sentence similarity positively correlated with the revisions, whereas 42 articles (8.4%) show a negative correlation. The results show that in the majority of the articles, the average semantic similarity increases with revisions. See the figure below for illustration.
 
 ![Crepe](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg){: .mx-auto.d-block :}
 
