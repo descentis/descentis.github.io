@@ -8,12 +8,12 @@ tags: [Wikipedia,Riviews]
 comments: true
 ---
 
-# Prohect Details
-Name: Tracing the Factoids: the Anatomy of Information Re-organization in Wikipedia Articles
+# Project Details
+**Name: Tracing the Factoids: the Anatomy of Information Re-organization in Wikipedia Articles**
 
-Authors: Amit Arjun Verma, Neeru Dubey, S. R. S. Iyengar, Simran Setia
+**Authors: Amit Arjun Verma, Neeru Dubey, S. R. S. Iyengar, Simran Setia**
 
-Portal(s) where submitted: CHIIR-21 and WWW-21
+**Portal(s) where submitted: CHIIR-21 and WWW-21**
 
 
 
