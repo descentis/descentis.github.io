@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tracing the Factoids: the Anatomy of Information Re-organization in Wikipedia Articles
+title: Tracing the Factoids
 subtitle: Accepted in The Web Conference - 2021 (Wiki Workshop)
 gh-repo: daattali/beautiful-jekyll
 gh-badge: [star, fork, follow]
