@@ -13,7 +13,7 @@ We investigate the impact of gradual edits on the re-positioning and organizatio
 
 
 ## Methodology
-For a Wikipedia article, we created the list of factoids for each of its revisions. Let’s say there are $n_i$ revisions
+For a Wikipedia article, we created the list of factoids for each of its revisions. Let’s say there are $n_i$ revisions in article $a_i$, then for each revision $R_j$, where $j ∈ {1, 2, 3, 4, ...,n_i }$, we create a list of factoids ordered in the way they were present in the revision $R_j$. We call this list as $F_j$.
 # Dataset
 
 Here's a useless table:
