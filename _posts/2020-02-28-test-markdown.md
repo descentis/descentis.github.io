@@ -25,7 +25,7 @@ we have taken a random sample of 500 articles out of 5000 most frequently edited
 
 In 458 articles out of 500 (91.6%), we observe average sentence similarity positively correlated with the revisions, whereas 42 articles (8.4%) show a negative correlation. The results show that in the majority of the articles, the average semantic similarity increases with revisions. See the figure below for illustration.
 
-![Crepe](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg){: .mx-auto.d-block :}
+![Crepe](https://github.com/descentis/descentis.github.io/blob/master/assets/img/fig1.png){: .mx-auto.d-block :}
 
 Here's a code chunk:
 
