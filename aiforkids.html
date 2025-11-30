@@ -1,0 +1,836 @@
+---
+layout: default
+title: AI Kids Lab - AI Learning Studio for Kids
+---
+
+<style>
+  :root {
+    --primary: #ff6f61;
+    --secondary: #4a90e2;
+    --accent-yellow: #ffd54f;
+    --accent-green: #81c784;
+    --bg-soft: #f7f9fc;
+    --card-radius: 18px;
+    --shadow-soft: 0 12px 30px rgba(0,0,0,0.08);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg-soft);
+    color: #222;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  /* ========== HERO ========== */
+
+  .hero-wrap {
+    background: radial-gradient(circle at top left, #ffd54f 0, #ff6f61 25%, #4fc3f7 60%, #7e57c2 100%);
+    color: #fff;
+    padding: 3rem 1.25rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-wrap::before,
+  .hero-wrap::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.18;
+    filter: blur(2px);
+  }
+
+  .hero-wrap::before {
+    width: 280px;
+    height: 280px;
+    background: #fff;
+    top: -60px;
+    right: -40px;
+  }
+
+  .hero-wrap::after {
+    width: 220px;
+    height: 220px;
+    background: #ffeb3b;
+    bottom: -60px;
+    left: -40px;
+  }
+
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .hero-badge-row {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-badge {
+    background: rgba(255,255,255,0.16);
+    border-radius: 999px;
+    padding: 0.25rem 0.9rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    border: 1px solid rgba(255,255,255,0.3);
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+    line-height: 1.1;
+    margin: 0.25rem 0 0.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-tagline {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    max-width: 520px;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-tagline b {
+    font-weight: 700;
+  }
+
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .btn-pill {
+    border-radius: 999px;
+    padding: 0.75rem 1.6rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
+  }
+
+  .btn-primary {
+    background: #fff;
+    color: var(--primary);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 26px rgba(0,0,0,0.24);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.8);
+  }
+
+  .btn-outline:hover {
+    background: rgba(255,255,255,0.12);
+    transform: translateY(-1px);
+  }
+
+  .hero-note {
+    font-size: 0.85rem;
+    opacity: 0.95;
+  }
+
+  /* Hero right side card */
+  .hero-card {
+    background: rgba(255,255,255,0.95);
+    color: #222;
+    border-radius: 20px;
+    padding: 1.75rem 1.5rem;
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-card::before {
+    content: "👨‍🏫";
+    position: absolute;
+    right: 1.2rem;
+    top: 1.1rem;
+    font-size: 2rem;
+    opacity: 0.12;
+  }
+
+  .hero-card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: var(--secondary);
+  }
+
+  .hero-card-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+
+  .tag-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin: 0.75rem 0 0.8rem;
+  }
+
+  .tag-chip {
+    font-size: 0.72rem;
+    border-radius: 999px;
+    padding: 0.18rem 0.55rem;
+    background: #e3f2fd;
+    color: #1565c0;
+  }
+
+  .hero-quote {
+    font-size: 0.86rem;
+    line-height: 1.6;
+    border-left: 3px solid var(--primary);
+    padding-left: 0.75rem;
+    margin-top: 0.6rem;
+  }
+
+  /* ========== GLOBAL SECTION ========== */
+
+  .section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2.75rem 1.25rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.35rem;
+    color: var(--secondary);
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1.4rem;
+  }
+
+  .section-badge {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+    font-weight: 700;
+  }
+
+  /* ========== ABOUT AMIT ========== */
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 2.25rem;
+    align-items: flex-start;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: var(--card-radius);
+    padding: 1.6rem 1.5rem;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .about-p {
+    font-size: 0.97rem;
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+  }
+
+  .timeline {
+    margin-top: 0.6rem;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .timeline-item {
+    position: relative;
+    padding-left: 1.6rem;
+    margin-bottom: 0.9rem;
+    font-size: 0.9rem;
+  }
+
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    left: 0.45rem;
+    top: 0.3rem;
+    width: 9px;
+    height: 9px;
+    border-radius: 999px;
+    background: var(--primary);
+  }
+
+  .timeline-item::after {
+    content: "";
+    position: absolute;
+    left: 0.5rem;
+    top: 1.1rem;
+    width: 1px;
+    height: 100%;
+    background: #ddd;
+  }
+
+  .timeline-item:last-child::after {
+    display: none;
+  }
+
+  .pill-row {
+    margin-top: 0.75rem;
+  }
+
+  .pill {
+    display: inline-block;
+    background: #fff3e0;
+    color: #ef6c00;
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    margin: 0.18rem;
+  }
+
+  .stats-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-top: 0.9rem;
+    font-size: 0.83rem;
+  }
+
+  .stat {
+    flex: 1 1 120px;
+  }
+
+  .stat strong {
+    display: block;
+    font-size: 1.15rem;
+  }
+
+  /* ========== WHY AI SECTION ========== */
+
+  .three-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 1.4rem;
+  }
+
+  .color-card {
+    border-radius: var(--card-radius);
+    padding: 1.4rem 1.3rem;
+    color: #222;
+    background: #fff;
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .color-card::before {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.6);
+    right: -35px;
+    top: -35px;
+    opacity: 0.7;
+  }
+
+  .color-card h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .color-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.1rem;
+  }
+
+  .emoji-badge {
+    font-size: 1.5rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .checklist {
+    list-style: none;
+    padding-left: 0;
+    font-size: 0.9rem;
+    margin: 0.4rem 0 0;
+  }
+
+  .checklist li {
+    margin-bottom: 0.25rem;
+  }
+
+  .checklist li::before {
+    content: "✔";
+    margin-right: 0.4rem;
+    color: #43a047;
+  }
+
+  /* ========== CURRICULUM ========== */
+
+  .curriculum-grid {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 1.3rem;
+  }
+
+  .badge-small {
+    display: inline-block;
+    padding: 0.18rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .badge-l1 { background: #fff8e1; color: #ff8f00; }
+  .badge-l2 { background: #e3f2fd; color: #1565c0; }
+  .badge-l3 { background: #e8f5e9; color: #2e7d32; }
+
+  .mini-list {
+    font-size: 0.88rem;
+    margin: 0.3rem 0 0;
+    padding-left: 1.1rem;
+  }
+
+  .mini-list li {
+    margin-bottom: 0.25rem;
+  }
+
+  .note-line {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 0.5rem;
+  }
+
+  /* ========== BATCH DETAILS & CTA ========== */
+
+  .batch-flex {
+    display: grid;
+    grid-template-columns: minmax(0,1.2fr) minmax(0,1fr);
+    gap: 1.6rem;
+    align-items: stretch;
+  }
+
+  .inline-list {
+    list-style: none;
+    padding-left: 0;
+    font-size: 0.9rem;
+  }
+
+  .inline-list li {
+    margin-bottom: 0.35rem;
+  }
+
+  .highlight-box {
+    border-radius: var(--card-radius);
+    padding: 1rem 1.1rem;
+    background: #fffde7;
+    border-left: 4px solid var(--accent-yellow);
+    font-size: 0.87rem;
+    line-height: 1.6;
+  }
+
+  .contact-section {
+    background: linear-gradient(120deg,#1e88e5,#5c6bc0);
+    color: #fff;
+    text-align: center;
+    padding: 2.9rem 1.25rem 2.7rem;
+    margin-top: 2rem;
+  }
+
+  .contact-details {
+    font-size: 0.98rem;
+    line-height: 1.8;
+  }
+
+  .contact-details b {
+    font-weight: 600;
+  }
+
+  .contact-note {
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
+    opacity: 0.95;
+  }
+
+  .footer-note {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #777;
+    padding: 1.3rem 1.25rem 2rem;
+  }
+
+  /* ========== RESPONSIVE ========== */
+
+  @media (max-width: 900px) {
+    .hero-inner,
+    .about-grid,
+    .three-grid,
+    .curriculum-grid,
+    .batch-flex {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+      font-size: 2.3rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hero-wrap {
+      padding-top: 2.3rem;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+    }
+  }
+</style>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero-wrap">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge-row">
+        <span class="hero-badge">AI Initiative for School Students</span>
+        <span class="hero-badge">Aligned with NEP 2020</span>
+      </div>
+
+      <h1 class="hero-title">AI Kids Lab</h1>
+      <h2 class="hero-subtitle">An AI Learning Studio for Classes 6–10</h2>
+      <p class="hero-tagline">
+        Help your child move from <b>using</b> AI to <b>understanding & creating</b> it.  
+        Hands-on learning in <b>Artificial Intelligence, Coding, Logic & Creativity</b> –
+        designed especially for Indian school students.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#enroll" class="btn-pill btn-primary">🚀 Enroll / Book a Call</a>
+        <a href="#curriculum" class="btn-pill btn-outline">📚 Explore Curriculum</a>
+      </div>
+
+      <p class="hero-note">
+        Ideal for curious students in <b>Classes 6–10</b> who love gadgets, games, maths, science or simply asking “Why?”.
+      </p>
+    </div>
+
+    <div>
+      <div class="hero-card">
+        <div class="hero-card-title">Instructor</div>
+        <div class="hero-card-name">Dr. Amit Arjun Verma</div>
+        <p style="font-size:0.9rem; margin:0.3rem 0 0.6rem;">
+          PhD in Computer Science – <b>IIT Ropar</b><br>
+          Ex–AI Engineer, <b>CoreCLM, Seattle (Legal NLP)</b><br>
+          Data Science Head – <b>HCL–GUVI</b>
+        </p>
+
+        <div class="tag-strip">
+          <span class="tag-chip">Wikipedia NLP & Data Compression</span>
+          <span class="tag-chip">Legal Contract Understanding (NLP)</span>
+          <span class="tag-chip">AI for Education & Learning Apps</span>
+        </div>
+
+        <p class="hero-quote">
+          “I have worked on <b>legal AI systems in Seattle</b> that read complex contracts,
+          and built <b>educational AI tools in India</b> used by thousands of learners.
+          AI Kids Lab brings that real-world experience to school students – in a playful, safe and inspiring way.”
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT AMIT ================= -->
+
+<section class="section" id="about">
+  <div class="section-badge">About the Mentor</div>
+  <h2 class="section-title">Who is behind AI Kids Lab?</h2>
+  <p class="section-subtitle">
+    A blend of <b>Indian academic excellence</b>, <b>global AI industry experience</b> and a strong
+    passion for <b>student-centric learning</b>.
+  </p>
+
+  <div class="about-grid">
+    <div class="card">
+      <p class="about-p">
+        <b>Dr. Amit Arjun Verma</b> is a Computer Science researcher and AI practitioner who
+        has been working at the intersection of <b>Artificial Intelligence, NLP, and Education</b>.
+      </p>
+      <p class="about-p">
+        After completing his PhD from <b>IIT Ropar</b>, Amit worked in <b>Seattle</b> at a company
+        called <b>CoreCLM</b>, where he solved <b>Legal NLP problems</b> – teaching AI systems to
+        read, understand and summarise complex legal contracts and clauses.
+      </p>
+      <p class="about-p">
+        Currently, as <b>Data Science Head at HCL–GUVI</b>, he leads the design of
+        <b>AI & Data Science courses</b>, builds <b>educational AI applications</b>, conducts
+        hackathons, and mentors learners across India.
+      </p>
+
+      <ul class="timeline">
+        <li class="timeline-item">
+          <b>IIT Ropar (PhD in Computer Science)</b> – Research on efficient methods to store and
+          analyse large-scale Wikipedia revision histories for AI & analytics.
+        </li>
+        <li class="timeline-item">
+          <b>CoreCLM, Seattle</b> – Built AI models that understand legal documents, contracts
+          and obligations using advanced NLP techniques.
+        </li>
+        <li class="timeline-item">
+          <b>HCL–GUVI (Data Science Head)</b> – Designing AI curricula, industry projects and
+          applications that help thousands of Indian students and professionals learn AI hands-on.
+        </li>
+      </ul>
+
+      <div class="pill-row">
+        <span class="pill">AI in Real Companies</span>
+        <span class="pill">Research + Industry Blend</span>
+        <span class="pill">Education Technology</span>
+        <span class="pill">Student Mentorship</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0;">What this means for your child</h3>
+      <p class="about-p">
+        AI Kids Lab is not just another coding class.  
+        It is a carefully designed space where students:
+      </p>
+      <ul class="checklist">
+        <li>Learn AI from someone who has actually <b>built AI products</b> for global companies</li>
+        <li>See how AI is used in <b>law, education, business and everyday life</b></li>
+        <li>Get exposure to <b>real-world stories</b> (e.g., how AI reads contracts)</li>
+        <li>Are encouraged to <b>ask questions, create projects and think independently</b></li>
+      </ul>
+
+      <div class="stats-strip">
+        <div class="stat">
+          <strong>10+ yrs</strong>
+          AI, NLP & Education experience
+        </div>
+        <div class="stat">
+          <strong>1000s</strong>
+          of learners mentored
+        </div>
+        <div class="stat">
+          <strong>India + Global</strong>
+          Research & industry exposure
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY AI & NEP ================= -->
+
+<section class="section" id="why-ai">
+  <div class="section-badge">Why Now?</div>
+  <h2 class="section-title">Why should school students learn AI?</h2>
+  <p class="section-subtitle">
+    The <b>National Education Policy (NEP) 2020</b> encourages schools to build
+    <b>computational thinking, creativity, problem-solving and digital literacy</b>.
+    AI Kids Lab is designed exactly with these goals in mind.
+  </p>
+
+  <div class="three-grid">
+    <div class="color-card" style="background: linear-gradient(135deg,#fff3e0,#ffe0b2);">
+      <div class="emoji-badge">🧠</div>
+      <h3>Stronger Thinking Skills</h3>
+      <p>AI projects naturally develop:</p>
+      <ul class="checklist">
+        <li>Logical & structured thinking</li>
+        <li>Pattern recognition & reasoning</li>
+        <li>Problem solving through experiments</li>
+      </ul>
+    </div>
+
+    <div class="color-card" style="background: linear-gradient(135deg,#e3f2fd,#bbdefb);">
+      <div class="emoji-badge">🎨</div>
+      <h3>Creativity with Technology</h3>
+      <p>Students use AI to:</p>
+      <ul class="checklist">
+        <li>Create stories, art & quizzes</li>
+        <li>Build mini-games & chatbots</li>
+        <li>Combine Maths, Science and Language with AI</li>
+      </ul>
+    </div>
+
+    <div class="color-card" style="background: linear-gradient(135deg,#e8f5e9,#c8e6c9);">
+      <div class="emoji-badge">🛡️</div>
+      <h3>Safe & Responsible AI Use</h3>
+      <p>We also teach:</p>
+      <ul class="checklist">
+        <li>What AI can & cannot do</li>
+        <li>Ethical and safe AI usage</li>
+        <li>Digital discipline & critical thinking</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CURRICULUM ================= -->
+
+<section class="section" id="curriculum">
+  <div class="section-badge">Program Overview</div>
+  <h2 class="section-title">What will students learn at AI Kids Lab?</h2>
+  <p class="section-subtitle">
+    A multi-level journey from <b>foundations</b> to <b>real mini-projects</b>, mapped to NEP 2020’s
+    21st–century skills.
+  </p>
+
+  <div class="curriculum-grid">
+    <div class="card">
+      <span class="badge-small badge-l1">Level 1 · Discover</span>
+      <h3 style="margin-top:0.25rem;">AI & Logic Foundations</h3>
+      <ul class="mini-list">
+        <li>What is AI? Everyday examples (phones, games, recommendations)</li>
+        <li>Fun unplugged activities (logic puzzles, pattern games)</li>
+        <li>Visual coding with <b>Scratch</b> for kids</li>
+        <li>Basic algorithms: sequences, conditions & loops</li>
+        <li>Activity: “If I were a robot” – students design rule-based systems</li>
+      </ul>
+      <p class="note-line">Suitable even for students with no coding background.</p>
+    </div>
+
+    <div class="card">
+      <span class="badge-small badge-l2">Level 2 · Explore</span>
+      <h3 style="margin-top:0.25rem;">Python & AI Concepts</h3>
+      <ul class="mini-list">
+        <li>Python basics – variables, loops, conditions in a child-friendly way</li>
+        <li>What is data? How machines “learn” from examples</li>
+        <li>Playful introductions to image / text classification ideas</li>
+        <li>Mini projects: quiz maker, maths helper, vocabulary assistant</li>
+        <li>Concept: How tools like ChatGPT or legal AI (like in CoreCLM) use text data</li>
+      </ul>
+      <p class="note-line">Makes abstract AI ideas understandable with stories & demos.</p>
+    </div>
+
+    <div class="card">
+      <span class="badge-small badge-l3">Level 3 · Create</span>
+      <h3 style="margin-top:0.25rem;">Real-World Mini AI Projects</h3>
+      <ul class="mini-list">
+        <li>Chatbot for school subjects (e.g., science helper)</li>
+        <li>AI story / poem generator for creative writing</li>
+        <li>Mini image classifier (e.g. fruits vs. veggies, shapes, signs)</li>
+        <li>Smart quiz generator for tests & revision</li>
+        <li>AI Art experiments with prompts and style ideas</li>
+      </ul>
+      <p class="note-line">Students finish with a small portfolio to showcase in school fairs & competitions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BATCH DETAILS ================= -->
+
+<section class="section" id="batches">
+  <div class="section-badge">Logistics</div>
+  <h2 class="section-title">Batch Details & Format</h2>
+  <p class="section-subtitle">
+    Designed for busy school schedules, with <b>small batches</b> and <b>high interaction</b>.
+  </p>
+
+  <div class="batch-flex">
+    <div class="card">
+      <h3 style="margin-top:0;">Batch Structure</h3>
+      <ul class="inline-list">
+        <li><b>Target Group:</b> Students from Class 6 to Class 10 (CBSE / ICSE / State boards)</li>
+        <li><b>Mode:</b> Hybrid – Live Online + Offline (where available)</li>
+        <li><b>Batch Size:</b> Small groups (max 8–10 students) for personalised attention</li>
+        <li><b>Schedule:</b> Weekend & evening batches to avoid school clashes</li>
+        <li><b>Pedagogy:</b> Activity-based, project-centric, not exam coaching</li>
+        <li><b>Certification:</b> AI Kids Lab completion certificate</li>
+      </ul>
+      <div class="highlight-box" style="margin-top:0.8rem;">
+        🌟 <b>Parents’ Note:</b> This program does not add “rotten extra homework”.  
+        Instead, it channels your child’s existing curiosity about mobiles, games & AI
+        into <b>structured learning and creation</b>.
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0;">What Students Take Away</h3>
+      <ul class="checklist">
+        <li>Confidence with coding and AI concepts</li>
+        <li>Improved logical & analytical thinking</li>
+        <li>A portfolio of small AI projects they can show teachers & relatives</li>
+        <li>Early understanding of modern careers like AI Engineer, Data Scientist, etc.</li>
+        <li>Awareness of how AI is used in fields like law, education, business & more</li>
+      </ul>
+      <p class="note-line">
+        Many students continue to build on these skills in higher classes (11–12, B.Tech, etc.)
+        – this is an early foundation.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT / ENROLL ================= -->
+
+<section class="contact-section" id="enroll">
+  <h2 style="margin-top:0; margin-bottom:0.4rem;">Enroll Your Child in AI Kids Lab</h2>
+  <p style="margin-top:0; margin-bottom:1.3rem; font-size:0.95rem; opacity:0.95;">
+    Limited seats per batch · Personalised guidance · Future-ready skills
+  </p>
+
+  <div class="contact-details">
+    📞 <b>Call / WhatsApp:</b> +91 XXXXX XXXXX<br>
+    📧 <b>Email:</b> amit.ai.learning@gmail.com<br>
+    📍 <b>Location:</b> Your City, India (Hybrid – Online + selective Offline)<br>
+  </div>
+
+  <p class="contact-note">
+    Share your child’s class, school board, and interests (Maths / Science / Coding / Arts) –  
+    we’ll suggest the most suitable starting level and batch.
+  </p>
+
+  <div style="margin-top:1.4rem;">
+    <a href="https://forms.gle/your-google-form-link" class="btn-pill btn-primary" style="margin:0 auto;">
+      ✏️ Fill Interest / Registration Form
+    </a>
+  </div>
+</section>
+
+<div class="footer-note">
+  © {{ site.time | date: "%Y" }} AI Kids Lab • An AI Initiative for Kids by Dr. Amit Arjun Verma (PhD, IIT Ropar · Ex-CoreCLM Seattle · Data Science Head, HCL–GUVI)
+</div>
