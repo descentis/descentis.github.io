@@ -10,5 +10,5 @@ I completed my PhD from IIT Ropar, worked in Seattle at CoreCLM on Legal NLP sys
 
 I created DSI — Data Science Initiative because I believe every child should understand how AI works—not just use it. My goal is to make AI learning simple, creative, and exciting for school students.
 
-![CV](assets/img/Professional_Resume.png){:class="img-responsive"}
+![CV](assets/img/amit_cv.png){:class="img-responsive"}
 
