@@ -496,6 +496,88 @@ title: AI Kids Lab - AI Learning Studio for Kids
     padding: 1.3rem 1.25rem 2rem;
   }
 
+  /* ========== WORKSHOP GALLERY / SLIDESHOW ========== */
+
+.slideshow-container {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+  background: #fff;
+}
+
+.slide {
+  display: none;
+}
+
+.slide-img {
+  width: 100%;
+  border-radius: 18px;
+}
+
+.caption {
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.75rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(4px);
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  user-select: none;
+  transition: 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Dots */
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.4s ease;
+}
+
+.active, .dot:hover {
+  background-color: #4a90e2;
+}
+
+/* Fade animation */
+.fade {
+  animation-name: fadeEffect;
+  animation-duration: 1.4s;
+}
+
+@keyframes fadeEffect {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
   /* ========== RESPONSIVE ========== */
 
   @media (max-width: 900px) {
@@ -805,6 +887,50 @@ title: AI Kids Lab - AI Learning Studio for Kids
   </div>
 </section>
 
+<!-- ================= WORKSHOP GALLERY / SLIDESHOW ================= -->
+<section class="section" id="workshops">
+  <div class="section-badge">Gallery</div>
+  <h2 class="section-title">Previous Workshops & Events</h2>
+  <p class="section-subtitle">A glimpse of the hands-on AI sessions, school workshops, and student activities I've conducted.</p>
+
+  <div class="slideshow-container">
+
+    <!-- Slide 1 -->
+    <div class="slide fade">
+      <img src="/assets/workshops/workshop1.jpg" class="slide-img">
+      <div class="caption">AI Bootcamp – Chennai</div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide fade">
+      <img src="/assets/workshops/workshop2.jpg" class="slide-img">
+      <div class="caption">School AI Workshop – Delhi</div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide fade">
+      <img src="/assets/workshops/workshop3.jpg" class="slide-img">
+      <div class="caption">GenAI Challenge – Bangalore</div>
+    </div>
+
+    <!-- Add more slides here -->
+
+    <!-- Navigation arrows -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+  <br>
+
+  <!-- Dots indicator -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+</section>
+
+
 <!-- ================= CONTACT / ENROLL ================= -->
 
 <section class="contact-section" id="enroll">
@@ -834,3 +960,33 @@ title: AI Kids Lab - AI Learning Studio for Kids
 <div class="footer-note">
   © {{ site.time | date: "%Y" }} AI Kids Lab • An AI Initiative for Kids by Dr. Amit Arjun Verma (PhD, IIT Ropar · Ex-CoreCLM Seattle · Data Science Head, HCL–GUVI)
 </div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("slide");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+}
+</script>
+
